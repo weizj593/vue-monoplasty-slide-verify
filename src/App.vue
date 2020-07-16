@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <slide-verify ref="slideVerify" @success="onSuccess" @again="onAgain" @fulfilled="onFulfilled" @fail="onFail"
-                  @refresh="onRefresh" :accuracy="1" :fnImgSrc="fnImgSrc" :fnVerify="fnVerify"></slide-verify>
+                  @refresh="onRefresh" :accuracy="1" :fnImgSrc="fnImgSrc" :fnVerify="fnVerify" :err-img="errImg"></slide-verify>
     <div>{{msg}}</div>
     <button class="btn" @click="handleClick">在父组件可以点我刷新哦</button>
   </div>
@@ -22,6 +22,7 @@ export default {
     return {
       msg: '',
       text: '向右拖动滑块填充拼图',
+      errImg: img1,
       imgs: [
         img0,
         img1,

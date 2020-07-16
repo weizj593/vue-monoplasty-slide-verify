@@ -70,6 +70,9 @@ export default {
       type: Boolean,
       default: true,
     },
+    errImg: {
+
+    },
     imgs: {
       type: Array,
       default: () => [],
@@ -179,7 +182,7 @@ export default {
       img.crossOrigin = 'Anonymous'
       img.onload = onload
       img.onerror = () => {
-        img.src = './dist/imgs/img1.f79e1d9ee0af670da4323145918396cf.jpg' //this.getRandomImg()
+        img.src = this.errImg //this.getRandomImg()
       }
       img.src = this.getRandomImg()
       return img
